@@ -207,23 +207,25 @@ public class GetAQuoteSteps extends Helper{
 
 	@When("^Your cover section is displayed$")
 	public void your_cover_section_is_displayed() throws Throwable {
-	   
+		getAQuotePage.isYourCoverSectionDisplayed();
 	}
 
 	@When("^I click NO to the question Do you or anyone living at your address have another policy insured with AXA$")
 	public void i_click_NO_to_the_question_Do_you_or_anyone_living_at_your_address_have_another_policy_insured_with_AXA() throws Throwable {
-	    
+	    getAQuotePage.clickNoButtonWhenAskedHaveAnotherPolicyInsuredWithAAXA();
 	}
 
 	@When("^I select how insurance is paid \"([^\"]*)\"$")
-	public void i_select_how_insurance_is_paid(String arg1) throws Throwable {
-	    
+	public void i_select_how_insurance_is_paid(String methodOfPayment) throws Throwable {
+	    getAQuotePage.selectPaymentMethod(methodOfPayment);
 	}
 
-	@When("^I pick insurance start date$")
-	public void i_pick_insurance_start_date() throws Throwable {
-	
+		
+	@When("^I pick insurance start date\"([^\"]*)\"$")
+	public void i_pick_insurance_start_date(String startDate) throws Throwable {
+		getAQuotePage.insuranceStartDate(startDate);
 	}
+
 
 	@When("^I tick the box to confirm  assumptions & data protection information has been read$")
 	public void i_tick_the_box_to_confirm_assumptions_data_protection_information_has_been_read() throws Throwable {

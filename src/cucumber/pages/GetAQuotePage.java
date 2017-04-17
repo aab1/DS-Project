@@ -3,6 +3,7 @@ package cucumber.pages;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 
 import cucumber.helper.Helper;
@@ -49,6 +50,11 @@ public class GetAQuotePage extends Helper{
 	WebElement confirmClaimSection;
 	WebElement claimsInLast5Years;
 	WebElement claimSectionContinueBtn;
+	WebElement coverSection;
+	WebElement anotherPolicy;
+	WebElement paymentMethod;
+	WebElement datepicker;
+	List<WebElement> allDates;
 
 	public void navigateToMotorDS() throws Exception
 	{
@@ -309,7 +315,49 @@ public class GetAQuotePage extends Helper{
 		waitForElementToBeDisplayed("[id=\"btn-claims\"]");
 		int continue_size = driver.findElements(By.cssSelector("[id=\"btn-claims\"]")).size();
 		driver.findElements(By.cssSelector("[id=\"btn-claims\"]")).get(continue_size-1).click();
+		//The code above was used cos element was not visit despite waiting
 		//claimSectionContinueBtn = getElementById("btn-claims");
 		//clickAnElement(carSectionContinueBtn);
 	}
+	
+	public void isYourCoverSectionDisplayed() throws Exception
+	{
+		coverSection = getElementByCssSelector("#your-cover > legend");
+		VerifyAnElementIsDisplayed(coverSection);
+	}
+	
+	public void clickNoButtonWhenAskedHaveAnotherPolicyInsuredWithAAXA()throws Exception
+	{
+		waitForElementToBeDisplayed("[for=\"YourCover_MultiProductB\"]");
+		anotherPolicy = getElementByCssSelector("[for=\"YourCover_MultiProductB\"]");
+		clickAnElement(anotherPolicy);
+	}
+	public void selectPaymentMethod(String methodOfPayment)throws Exception
+	{
+		paymentMethod = getElementById("YourCover_HowDoYouNormallyPayId");
+		selectByText(paymentMethod, methodOfPayment);
+	}
+	
+	public void insuranceStartDate(String startDate) throws Exception
+	{
+		datepicker = getElementByCssSelector("[class=\"k-icon k-i-calendar\"]");
+		clickAnElement(datepicker);
+		
+		allDates = getElementsByXPath("//table[@class=\"k-content\"]//td");
+		
+		for(WebElement ele:allDates)
+		{
+			
+			String date=ele.getText();
+			
+			if(date.equalsIgnoreCase(startDate))
+			{
+				ele.click();
+				break;
+			}
+			
+		}
+	}
+	
+	
 }

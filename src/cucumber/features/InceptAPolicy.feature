@@ -46,7 +46,7 @@ Scenario Outline: Incept scheme A comprehensive ROI motor policy for employed an
 		 And Your cover section is displayed
 		 And I click NO to the question Do you or anyone living at your address have another policy insured with AXA
 		 And I select how insurance is paid "<methodOfPayment>" 
-		 And I pick insurance start date
+		 And I pick insurance start date"<startDate>"
 		 And I tick the box to confirm  assumptions & data protection information has been read
 		 And I click Get a Quote button
 		 And Your quote page is displayed 
@@ -59,8 +59,8 @@ Scenario Outline: Incept scheme A comprehensive ROI motor policy for employed an
 
 		 
 Scenarios:		 
-		|firstName|lastName|dayOfBirth|birthMonth|birthYear|gender	|email				   	   |areaCode |phoneNumber|eircodeYes/No|eircode  |household 			|employmentStatus|occupation|carRegNum|kilometersDriven|drivingLicence|licenceAge|recentInsurance	 |numOfClaimFreeYears		  |methodOfPayment|
-		|Ade	  |Peters  |12		  |	05 - May |	1970   |Female  |	test@sttesting.net	   |085		 |857765432  |Yes		   |D15tx65  |Rented Accommodation  |	Employed	 |Accountant|01D26622 |Up to 5,000 km  |ROI (Full)	  |9 years	 |Insured in own name|6+ Years Claims Free Driving|Pay in full	  |
+		|firstName|lastName|dayOfBirth|birthMonth|birthYear|gender	|email				   	   |areaCode |phoneNumber|eircodeYes/No|eircode  |household 			|employmentStatus|occupation|carRegNum|kilometersDriven|drivingLicence|licenceAge|recentInsurance	 |numOfClaimFreeYears		  |methodOfPayment|startDate	|
+		|Ade	  |Peters  |12		  |	05 - May |	1970   |Female  |	test@sttesting.net	   |085		 |857765432  |Yes		   |D15tx65  |Rented Accommodation  |	Employed	 |Accountant|10D262 |Up to 5,000 km  |ROI (Full)	  |9 years	 |Insured in own name|6+ Years Claims Free Driving|Pay in full	  |28			|
 		
 		
 		

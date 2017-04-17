@@ -43,6 +43,6 @@ public class DS_Hooks extends Helper
 		   }
 		  }
 		
-		closeBrowser();
+		//closeBrowser();
 	}
 }
