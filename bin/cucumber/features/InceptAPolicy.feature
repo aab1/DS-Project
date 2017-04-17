@@ -60,7 +60,7 @@ Scenario Outline: Incept scheme A comprehensive ROI motor policy for employed an
 		 
 Scenarios:		 
 		|firstName|lastName|dayOfBirth|birthMonth|birthYear|gender	|email				   	   |areaCode |phoneNumber|eircodeYes/No|eircode  |household 			|employmentStatus|occupation|carRegNum|kilometersDriven|drivingLicence|licenceAge|recentInsurance	 |numOfClaimFreeYears		  |methodOfPayment|startDate	|
-		|Ade	  |Peters  |12		  |	05 - May |	1970   |Female  |	test@sttesting.net	   |085		 |857765432  |Yes		   |D15tx65  |Rented Accommodation  |	Employed	 |Accountant|10D262 |Up to 5,000 km  |ROI (Full)	  |9 years	 |Insured in own name|6+ Years Claims Free Driving|Pay in full	  |28			|
+		|Ade	  |Peters  |12		  |	05 - May |	1970   |Female  |	test@sttesting.net	   |087		 |0879567812  |Yes		   |D15tx65  |Rented Accommodation  |	Employed	 |Accountant|10D262 |Up to 5,000 km  |ROI (Full)	  |9 years	 |Insured in own name|6+ Years Claims Free Driving|Pay in full	  |28			|
 		
 		
 		

@@ -4,10 +4,12 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.When;
 import cucumber.helper.Helper;
 import cucumber.pages.GetAQuotePage;
+import cucumber.pages.YourQuotePage;
 
 public class GetAQuoteSteps extends Helper{
 	
 	GetAQuotePage getAQuotePage = new GetAQuotePage();
+	YourQuotePage yourQuotePage = new YourQuotePage();
 
 	@Given("^I navigate to ROI motor DS$")
 	public void i_navigate_to_ROI_motor_DS() throws Throwable {
@@ -229,17 +231,17 @@ public class GetAQuoteSteps extends Helper{
 
 	@When("^I tick the box to confirm  assumptions & data protection information has been read$")
 	public void i_tick_the_box_to_confirm_assumptions_data_protection_information_has_been_read() throws Throwable {
-	   
+	   getAQuotePage.agreeTermsCheckBox();
 	}
 
 	@When("^I click Get a Quote button$")
 	public void i_click_Get_a_Quote_button() throws Throwable {
-	  
+	  getAQuotePage.getQuoteButton();
 	}
 
 	@When("^Your quote page is displayed$")
 	public void your_quote_page_is_displayed() throws Throwable {
-	   
+	   yourQuotePage.isYourQuotePageDisplayed();
 	}
 
 

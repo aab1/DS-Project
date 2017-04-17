@@ -55,6 +55,8 @@ public class GetAQuotePage extends Helper{
 	WebElement paymentMethod;
 	WebElement datepicker;
 	List<WebElement> allDates;
+	WebElement agreeTerms;
+	WebElement getQuoteBtn;
 
 	public void navigateToMotorDS() throws Exception
 	{
@@ -289,6 +291,7 @@ public class GetAQuotePage extends Helper{
 	
 	public void clickNoAdditionalDriver() throws Exception
 	{
+		waitForElementToBeDisplayed("[for=\"YourAdditionalDrivers_AddingAdditionalDriverB\"]");
 		noAddtionalDriver = getElementByCssSelector("[for=\"YourAdditionalDrivers_AddingAdditionalDriverB\"]");
 		clickAnElement(noAddtionalDriver);
 	}
@@ -359,5 +362,21 @@ public class GetAQuotePage extends Helper{
 		}
 	}
 	
+	public void agreeTermsCheckBox() throws Exception
+	{
+		waitForElementToBeDisplayed("#agree-terms-label");
+		agreeTerms = getElementByXPath("//*[@id=\"agree-terms-label\"]");
+		clickAnElement(agreeTerms);
+	}
+	//handshake happens below
+	public YourQuotePage getQuoteButton() throws Exception
+	{
+		getQuoteBtn = getElementById("btn-getQuote");
+		clickAnElement(getQuoteBtn);
+		return new YourQuotePage();
+	}
 	
+	
+	
+
 }
