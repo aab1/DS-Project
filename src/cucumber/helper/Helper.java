@@ -45,11 +45,33 @@ public class Helper
 		wait = new WebDriverWait(driver, 30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(element)));
 	}
+	
+	public static void waitForElementToBeClickable(String element) throws Exception
+	{
+		wait = new WebDriverWait(driver, 30);
+		wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(element)));
+	}
+	
+	public static void waitForElementToDisAppear(String element) throws Exception
+	{
+		wait = new WebDriverWait(driver, 30);
+		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector(element)));
+	}
+	
+	
 	/*This method helps to scroll to the bottom of a page*/
 	public static void scrollToTheButtomOfAPage() throws Exception
 	{
 		 ((JavascriptExecutor) driver)
          .executeScript("window.scrollTo(0, document.body.scrollHeight)");
+	}
+	
+	/*This method will scroll to an element
+	 * this will help to resolve element not clickable issue*/
+	public static void scrollToAnElement(WebElement element) throws Exception
+	{
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+		Thread.sleep(500); 
 	}
 	
 	/*####################################################################

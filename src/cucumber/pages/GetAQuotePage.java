@@ -1,10 +1,13 @@
 package cucumber.pages;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
 
 import cucumber.helper.Helper;
 
@@ -103,10 +106,14 @@ public class GetAQuotePage extends Helper{
 		if(sex.equals("male"))
 		{
 			gender = getElementByCssSelector("[for=\"YourDetails_GenderIdA\"]");
+			//gender = getElementByXPath("//label[text() = \"Male\"]");
+			//HoverOver(gender);
 			clickAnElement(gender);
 		}else
 		{
 			gender = getElementByCssSelector("[for=\"YourDetails_GenderIdB\"]");
+			//gender = getElementByXPath("//label[text() = \"Female\"]");
+			//HoverOver(gender);
 			clickAnElement(gender);
 		}
 		
@@ -158,7 +165,8 @@ public class GetAQuotePage extends Helper{
 	{
 		scrollToTheButtomOfAPage();
 		waitForElementToBeDisplayed(".btn.btn-emphasis.btn-icon-right.icon.addressLookupSearchButton");
-		findaddress = getElementByCssSelector(".btn.btn-emphasis.btn-icon-right.icon.addressLookupSearchButton");
+		//findaddress = getElementByCssSelector(".btn.btn-emphasis.btn-icon-right.icon.addressLookupSearchButton");
+		findaddress = getElementByXPath("//*[@id=\"address-fieldset\"]/ol/li[8]/div/div/button");
 		clickAnElement(findaddress);
 			
 	}
