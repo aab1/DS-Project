@@ -9,7 +9,7 @@ import cucumber.pages.YourQuotePage;
 public class GetAQuoteSteps extends Helper{
 	
 	GetAQuotePage getAQuotePage = new GetAQuotePage();
-	YourQuotePage yourQuotePage = new YourQuotePage();
+	YourQuotePage yourQuotePage;
 
 	@Given("^I navigate to ROI motor DS$")
 	public void i_navigate_to_ROI_motor_DS() throws Throwable {
@@ -233,10 +233,10 @@ public class GetAQuoteSteps extends Helper{
 	public void i_tick_the_box_to_confirm_assumptions_data_protection_information_has_been_read() throws Throwable {
 	   getAQuotePage.agreeTermsCheckBox();
 	}
-
+//handshake here below
 	@When("^I click Get a Quote button$")
 	public void i_click_Get_a_Quote_button() throws Throwable {
-	  getAQuotePage.getQuoteButton();
+		yourQuotePage = getAQuotePage.getQuoteButton();
 	}
 
 	@When("^Your quote page is displayed$")

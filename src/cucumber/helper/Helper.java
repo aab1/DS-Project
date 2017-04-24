@@ -23,6 +23,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.gargoylesoftware.htmlunit.javascript.background.JavaScriptExecutor;
+
 public class Helper 
 {
 	protected static WebDriver driver;
@@ -51,7 +53,8 @@ public class Helper
 		wait = new WebDriverWait(driver, 30);
 		wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(element)));
 	}
-	
+	/*This method should be called and used when an element is covering the element you want to deal with
+	 * The parameter(element) = copy the element from the error trace and use it as css selector */
 	public static void waitForElementToDisAppear(String element) throws Exception
 	{
 		wait = new WebDriverWait(driver, 30);
@@ -275,6 +278,8 @@ public class Helper
 		select.selectByValue(value);
 	}
 	
+
+	
 	/*###################################################################################################################
 	Uses - This method helps to select element from a dropdown by specifying the Text of the item needed to be selected
 	It takes in the dropdown as a WebElement and the Text as a String
@@ -303,7 +308,24 @@ public class Helper
 		FileUtils.copyFile(screenshot, new File(fileName));
 			
 	}
-	
+	public static Object RunScript(String script)
+    {
+        JavascriptExecutor js = ((JavascriptExecutor)driver);
+        return js.executeScript(script);
+    }
+	 public static WebElement FindElementByJs(String jsCommand)
+     {
+		 List<WebElement> returnedElement = (List<WebElement>)RunScript(jsCommand);
+
+         if (returnedElement.size() == 1)
+         {
+             for (WebElement element: returnedElement)
+             {
+                 return element;
+             }
+         }
+         return null;
+     }
 	/*##########################################################################
 	Uses - This method helps to find element by specifying the Id of the element
 	It takes in the Id as a string
@@ -456,7 +478,7 @@ public class Helper
 				if(tryCount == 3)
 				{
 					saveScreenshot();
-					System.out.println(element.toString() + " cannot be found");
+					//System.out.println(element.toString() + " cannot be found");
 					throw e;
 				}
 				

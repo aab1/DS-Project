@@ -2,7 +2,6 @@ package cucumber.pages;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
@@ -102,18 +101,16 @@ public class GetAQuotePage extends Helper{
 	
 	public void gender(String sex)throws Exception
 	{
-		sex=sex.toLowerCase();
+		  sex=sex.toLowerCase();
 		if(sex.equals("male"))
 		{
 			gender = getElementByCssSelector("[for=\"YourDetails_GenderIdA\"]");
-			//gender = getElementByXPath("//label[text() = \"Male\"]");
-			//HoverOver(gender);
+			
+			waitForElementToBeClickable("[for=\"YourDetails_GenderIdA\"]");
 			clickAnElement(gender);
 		}else
 		{
 			gender = getElementByCssSelector("[for=\"YourDetails_GenderIdB\"]");
-			//gender = getElementByXPath("//label[text() = \"Female\"]");
-			//HoverOver(gender);
 			clickAnElement(gender);
 		}
 		
@@ -300,6 +297,7 @@ public class GetAQuotePage extends Helper{
 	public void clickNoAdditionalDriver() throws Exception
 	{
 		waitForElementToBeDisplayed("[for=\"YourAdditionalDrivers_AddingAdditionalDriverB\"]");
+		waitForElementToDisAppear("class=\"validation-wrapper");
 		noAddtionalDriver = getElementByCssSelector("[for=\"YourAdditionalDrivers_AddingAdditionalDriverB\"]");
 		clickAnElement(noAddtionalDriver);
 	}
@@ -323,10 +321,10 @@ public class GetAQuotePage extends Helper{
 	}
 	public void clickClaimsSectionContinueButton() throws Exception
 	{
-		waitForElementToBeDisplayed("[id=\"btn-claims\"]");
+		waitForElementToBeDisplayed("#btn-claims");
 		int continue_size = driver.findElements(By.cssSelector("[id=\"btn-claims\"]")).size();
 		driver.findElements(By.cssSelector("[id=\"btn-claims\"]")).get(continue_size-1).click();
-		//The code above was used cos element was not visit despite waiting
+		//The code above was used cos element was not visited despite waiting
 		//claimSectionContinueBtn = getElementById("btn-claims");
 		//clickAnElement(carSectionContinueBtn);
 	}
@@ -376,7 +374,7 @@ public class GetAQuotePage extends Helper{
 		agreeTerms = getElementByXPath("//*[@id=\"agree-terms-label\"]");
 		clickAnElement(agreeTerms);
 	}
-	//handshake happens below
+	//return the step2 page below
 	public YourQuotePage getQuoteButton() throws Exception
 	{
 		getQuoteBtn = getElementById("btn-getQuote");
