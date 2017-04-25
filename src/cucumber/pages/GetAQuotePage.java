@@ -64,6 +64,7 @@ public class GetAQuotePage extends Helper{
 	{
 		launchUrl("https://testservices1.axa.ie/MotorQuote/");
 		//launchUrl("https://secureweb.axa.ie/MotorQuote/Step1?promoCode=AXP020001");
+		//launchUrl("https://dsdev.testaxa.ie/MotorQuote/");
 	}
 	
 	public void isMotorDSDisplayed() throws Exception
@@ -101,15 +102,18 @@ public class GetAQuotePage extends Helper{
 	
 	public void gender(String sex)throws Exception
 	{
+		
 		  sex=sex.toLowerCase();
 		if(sex.equals("male"))
 		{
+			scrollToAnElement( getElementById("YourDetails_DateOfBirthYear"));
 			gender = getElementByCssSelector("[for=\"YourDetails_GenderIdA\"]");
 			
 			waitForElementToBeClickable("[for=\"YourDetails_GenderIdA\"]");
 			clickAnElement(gender);
 		}else
 		{
+			scrollToAnElement(getElementById("YourDetails_DateOfBirthYear"));
 			gender = getElementByCssSelector("[for=\"YourDetails_GenderIdB\"]");
 			clickAnElement(gender);
 		}
@@ -160,12 +164,12 @@ public class GetAQuotePage extends Helper{
 	
 	public void findAddress()throws Exception
 	{
-		scrollToTheButtomOfAPage();
+		scrollToAnElement(getElementByCssSelector("[for=\"YourDetails_Address_UseEircodeB\"]"));
 		waitForElementToBeDisplayed(".btn.btn-emphasis.btn-icon-right.icon.addressLookupSearchButton");
 		//findaddress = getElementByCssSelector(".btn.btn-emphasis.btn-icon-right.icon.addressLookupSearchButton");
 		findaddress = getElementByXPath("//*[@id=\"address-fieldset\"]/ol/li[8]/div/div/button");
 		clickAnElement(findaddress);
-			
+		scrollToTheButtomOfAPage();	
 	}
 	
 	public void address_checkBox()throws Exception
@@ -245,6 +249,7 @@ public class GetAQuotePage extends Helper{
 	}
 	public void clickYourCarSectionContinueButton() throws Exception
 	{
+		scrollToAnElement(getElementById("YourCar_DrivingUsageId"));
 		carSectionContinueBtn = getElementById("btn-vehicle");
 		clickAnElement(carSectionContinueBtn);
 	}
@@ -370,6 +375,7 @@ public class GetAQuotePage extends Helper{
 	
 	public void agreeTermsCheckBox() throws Exception
 	{
+		scrollToTheButtomOfAPage();
 		waitForElementToBeDisplayed("#agree-terms-label");
 		agreeTerms = getElementByXPath("//*[@id=\"agree-terms-label\"]");
 		clickAnElement(agreeTerms);

@@ -125,12 +125,13 @@ public class CompleteAndPayPage extends Helper{
 	}
 	public void clickYesClaimFreeWasEarnedInIrelandOrUK() throws Exception
 	{
-		scrollToTheButtomOfAPage();
+		scrollToAnElement(getElementById("CompleteInsuranceDetails_CurrentInsuranceExpiryDate"));
 		claimfree_Yes = getElementByCssSelector("[for=\"CompleteInsuranceDetails_HasIrelandOrUkDrivingExperienceA\"]");
 		clickAnElement(claimfree_Yes);
 	}
 	public void clickNo_haveYouBeenRefusedOrDeclinedMotorInsurance() throws Exception
 	{
+		scrollToAnElement(getElementByCssSelector("[for=\"CompleteInsuranceDetails_HasIrelandOrUkDrivingExperienceA\"]"));
 		declinedMotorInsurance_No = getElementByCssSelector("[for=\"CompleteInsuranceDetails_Ild4B\"]");
 		clickAnElement(declinedMotorInsurance_No);
 	}
@@ -141,6 +142,7 @@ public class CompleteAndPayPage extends Helper{
 	}
 	public void clickContinueButtonToGoToCarDetailsSection() throws Exception
 	{
+		scrollToTheButtomOfAPage();
 		continueButtonToGoToCarDetailsSection = getElementByCssSelector("#completeInsuranceDetails > ol > li.Bn > div > div:nth-child(1) > button");
 		clickAnElement(continueButtonToGoToCarDetailsSection);
 	}
@@ -210,9 +212,10 @@ public class CompleteAndPayPage extends Helper{
 	}
 	public void clickYes_isARegisteredByYou() throws Exception
 	{
-		scrollToTheButtomOfAPage();
+		scrollToAnElement(getElementById("CompleteCarDetails_CarPurchaseDateYear"));
 		carIsARegisteredByYou = getElementByCssSelector("#completeCarDetails > ol > li:nth-child(8) > div > div > div > div > label:nth-child(2)");
 		clickAnElement(carIsARegisteredByYou);
+		scrollToTheButtomOfAPage();
 	}
 	public void clickNo_theCarGoingOnCoverHasNotBeenModified() throws Exception
 	{
@@ -226,7 +229,8 @@ public class CompleteAndPayPage extends Helper{
 	}
 	public void isConfirmDetailsSectionDisplayed() throws Exception
 	{
-		confirmDetailsSectionDisplayed = getElementByCssSelector("#confirmSuppliedDetails > div.box.no-top-margin > div.box-header > h2");
+		scrollToAnElement(getElementByCssSelector("#completeConfirmDetails > ol > li:nth-child(2) > div.confirmDetailsRight > div.box.no-top-margin.ild.clearfloat > div.box-header > h2"));
+		confirmDetailsSectionDisplayed = getElementByXPath("//*[@id=\"completeConfirmDetails\"]/ol/li[2]/div[2]/div[1]/div[1]/h2");
 		VerifyAnElementIsDisplayed(confirmDetailsSectionDisplayed);
 	}
 	public void confirmTheQuoteDetailsCheckBox() throws Exception
@@ -245,9 +249,10 @@ public class CompleteAndPayPage extends Helper{
 	public SecurePaymentPage clickPayInFullBtn() throws Exception
 	{
 		//scrollToTheButtomOfAPage();
+		
 		closeCookieButton = getElementById("set-cookie");
 		clickAnElement(closeCookieButton);
-		
+		scrollToAnElement(getElementById("btnPayInFull"));
 		payInFullBtn = getElementById("btnPayInFull");
 		clickAnElement(payInFullBtn);
 		return new SecurePaymentPage();

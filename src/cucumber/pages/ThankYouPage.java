@@ -11,14 +11,15 @@ public class ThankYouPage extends Helper{
 	
 	public void isThankYouPageDisplayed() throws Exception
 	{
-		thankYouPagedisplayed = getElementByXPath("//*[@id=\"page-content\"]/div[2]");
+		thankYouPagedisplayed = getElementByCssSelector("[class=\"h3 heading\"]");
 		VerifyAnElementIsDisplayed(thankYouPagedisplayed);
 	}
 	public void isPolicyNumberDisplayed()throws Exception
 	{
 		policyNumber = getElementById("policyNumber");
-		String actualpolicyNumber = policyNumber.getAttribute(getPageSource());
+		String actualpolicyNumber = policyNumber.getText();
 		System.out.println(actualpolicyNumber);
+		scrollToTheButtomOfAPage();
 	}
 	
 	public void isMyAxaButtonDisplayed()throws Exception

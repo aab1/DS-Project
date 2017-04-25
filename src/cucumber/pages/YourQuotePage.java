@@ -65,6 +65,7 @@ public class YourQuotePage extends Helper{
 	}
 	public void updateQuoteButton() throws Exception
 	{
+		scrollToTheButtomOfAPage();
 		updateQuoteButton = getElementByCssSelector("#Qr > div.Bn.clearfloat.quote-actions > div > div:nth-child(1) > button.btn.btn-lg.btn-block.btn-emphasis.update");
 		clickAnElement(updateQuoteButton);
 	}
