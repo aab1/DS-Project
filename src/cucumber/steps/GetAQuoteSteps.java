@@ -20,6 +20,11 @@ public class GetAQuoteSteps extends Helper{
 	public void motor_DS_Your_Detail_section_is_displayed() throws Throwable {
 		getAQuotePage.isMotorDSDisplayed();
 	}
+	@When("^I select title \"([^\"]*)\"$")
+	public void i_select_title(String sTitle) throws Throwable {
+	   getAQuotePage.selectTitle(sTitle);
+	}
+
 
 	@When("^I input firstname \"([^\"]*)\"$")
 	public void i_input_firstname(String fname ) throws Throwable {
@@ -96,6 +101,15 @@ public class GetAQuoteSteps extends Helper{
 	public void i_select_employment_status(String employmentStatus) throws Throwable {
 		getAQuotePage.selectEmploymentStatus(employmentStatus);
 	}
+	@When("^I click  Yes when asked: Do you have a part-time occupation\\?$")
+	public void i_click_Yes_when_asked_Do_you_have_a_part_time_occupation() throws Throwable {
+	   getAQuotePage.clickYEsYouHaveAPartTimeOccupation();
+	}
+
+	@When("^I select part time occupation\"([^\"]*)\"$")
+	public void i_select_part_time_occupation(String enterpartOccupation) throws Throwable {
+		getAQuotePage.selectPartTimeOccupation(enterpartOccupation);
+	}
 
 	@When("^I select occupation\"([^\"]*)\"$")
 	public void i_select_occupation(String enterOccupation) throws Throwable {
@@ -142,6 +156,12 @@ public class GetAQuoteSteps extends Helper{
 	public void i_select_the_number_kilometers_driven_per_year(String numOfKilo) throws Throwable {
 	   getAQuotePage.selectNumberOfKilometerForDrivingUsage(numOfKilo);
 	}
+	// sprint 1 experiment code changes for mileage buttons
+	@When("^I select a button for the number of kilometers driven per year\"([^\"]*)\"$")
+	public void i_select_a_button_for_the_number_of_kilometers_driven_per_year(String mileageBtn) throws Throwable {
+	   getAQuotePage.clickMileageButton(mileageBtn);
+	}
+
 	@When("^I click continue button under Your Car section$")
 	public void i_click_continue_button_under_Your_Car_section() throws Throwable {
 	   getAQuotePage.clickYourCarSectionContinueButton();
@@ -216,6 +236,11 @@ public class GetAQuoteSteps extends Helper{
 	public void i_click_NO_to_the_question_Do_you_or_anyone_living_at_your_address_have_another_policy_insured_with_AXA() throws Throwable {
 	    getAQuotePage.clickNoButtonWhenAskedHaveAnotherPolicyInsuredWithAAXA();
 	}
+	@When("^I select Yes when asked: Would you like an AXA Student First quote\\?$")
+	public void i_select_Yes_when_asked_Would_you_like_an_AXA_Student_First_quote() throws Throwable {
+	    getAQuotePage.clickYesYoulikeAnAXAStudentFirstQuote();
+	}
+
 
 	@When("^I select how insurance is paid \"([^\"]*)\"$")
 	public void i_select_how_insurance_is_paid(String methodOfPayment) throws Throwable {
@@ -243,6 +268,7 @@ public class GetAQuoteSteps extends Helper{
 	public void your_quote_page_is_displayed() throws Throwable {
 	   yourQuotePage.isYourQuotePageDisplayed();
 	}
+
 
 
 }

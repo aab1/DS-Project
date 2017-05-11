@@ -59,18 +59,29 @@ public class GetAQuotePage extends Helper{
 	List<WebElement> allDates;
 	WebElement agreeTerms;
 	WebElement getQuoteBtn;
+	WebElement mileageButton;
+	WebElement title;
+	WebElement partTimeOccupation;
+	WebElement studentFirstQuote;
 
 	public void navigateToMotorDS() throws Exception
 	{
-		launchUrl("https://testservices1.axa.ie/MotorQuote/");
+		//launchUrl("https://testservices1.axa.ie/MotorQuote/");
 		//launchUrl("https://secureweb.axa.ie/MotorQuote/Step1?promoCode=AXP020001");
 		//launchUrl("https://dsdev.testaxa.ie/MotorQuote/");
+		launchUrl("https://securewebtest.axa.ie/motorquote");
+		//launchUrl("https://securewebtest.axa.ie/aib/motorquote");
 	}
 	
 	public void isMotorDSDisplayed() throws Exception
 	{
 		yourDetails = getElementByCssSelector("#personal-details > legend");
 		VerifyAnElementIsDisplayed(yourDetails);
+	}
+	public void selectTitle(String sTitle) throws Exception
+	{
+		title = getElementById("YourDetails_TitleId");
+		selectByText(title, sTitle);
 	}
 	public void enterFirstName(String fname) throws Exception
 	{
@@ -191,14 +202,28 @@ public class GetAQuotePage extends Helper{
 		employmentSta = getElementById("YourDetails_EmploymentStatusId");
 		selectByText(employmentSta, employmentStatus);
 	}
+	
+	public void clickYEsYouHaveAPartTimeOccupation() throws Exception
+	{
+		partTimeOccupation = getElementByCssSelector("[for=\"YourDetails_HasPartTimeOccupationA\"]");
+		clickAnElement(partTimeOccupation);
+	}
+	
 	public void selectOccupation(String enterOccupation) throws Exception
 	{
 		String  dynamicElement = ("[class=\"filterText novalidate evt-input-change-bound\"]");
 		waitForElementToBeDisplayed(dynamicElement);
 		occupation = getElementsByCssSelector(dynamicElement);
 		typeGivenValueInto(occupation.get(1), enterOccupation);
+		//after typing into the field, get the webelement of the occupation you want to choose 
 		WebElement selectElementFromList = getElementByCssSelector("body > ul:nth-child(1) > li:nth-child(1)");
 		clickAnElement(selectElementFromList);
+	}
+	
+	public void selectPartTimeOccupation(String enterpartOccupation) throws Exception
+	{
+		partTimeOccupation = getElementById("YourDetails_OccupationTypeId");
+		selectByText(partTimeOccupation, enterpartOccupation);
 	}
 	
 	public void clickContinueOnDetailsSection() throws Exception
@@ -247,9 +272,33 @@ public class GetAQuotePage extends Helper{
 		drivingUsage = getElementById("YourCar_DrivingUsageId");
 		selectByText(drivingUsage, numOfKilo);
 	}
+	public void clickMileageButton(String mileageBtn)throws Exception
+	{
+		scrollToAnElement(getElementByCssSelector("[for=\"YourCar_CommutingUseTypeIdB\"]"));
+		
+		try{
+			if (mileageBtn.equals("Up to 8,000")){
+				mileageButton = getElementByCssSelector("[for=\"YourCar_DrivingUsageId_1\"]");
+				clickAnElement(mileageButton);
+			}else if(mileageBtn.equals("Up to 13,000")){
+				mileageButton = getElementByCssSelector("[for=\"YourCar_DrivingUsageId_2\"]");
+				clickAnElement(mileageButton);
+			}else{
+				mileageButton = getElementByCssSelector("[for=\"YourCar_DrivingUsageId_3\"]");
+				clickAnElement(mileageButton);
+			}
+		}catch(Exception e){
+			mileageButton = getElementById("YourCar_DrivingUsageId");
+			selectByText(mileageButton, mileageBtn+" "+"km");
+		}
+		
+		
+	}
+	
 	public void clickYourCarSectionContinueButton() throws Exception
 	{
-		scrollToAnElement(getElementById("YourCar_DrivingUsageId"));
+		//scrollToAnElement(getElementById("YourCar_DrivingUsageId"));
+		scrollToAnElement(getElementByCssSelector("[for=\"YourCar_CommutingUseTypeIdB\"]"));
 		carSectionContinueBtn = getElementById("btn-vehicle");
 		clickAnElement(carSectionContinueBtn);
 	}
@@ -321,6 +370,7 @@ public class GetAQuotePage extends Helper{
 	
 	public void clickNoClaimsInLastFiveYears() throws Exception
 	{
+		scrollToTheButtomOfAPage();
 		claimsInLast5Years = getElementByCssSelector("[for=\"YourClaims_AddingClaimB\"]");
 		clickAnElement(claimsInLast5Years);
 	}
@@ -346,6 +396,13 @@ public class GetAQuotePage extends Helper{
 		anotherPolicy = getElementByCssSelector("[for=\"YourCover_MultiProductB\"]");
 		clickAnElement(anotherPolicy);
 	}
+	
+	public void clickYesYoulikeAnAXAStudentFirstQuote() throws Exception
+	{
+		studentFirstQuote = getElementByCssSelector("[for=\"YourCover_IsStudentFirstQuoteA\"]");
+		clickAnElement(studentFirstQuote);
+	}
+	
 	public void selectPaymentMethod(String methodOfPayment)throws Exception
 	{
 		paymentMethod = getElementById("YourCover_HowDoYouNormallyPayId");
@@ -388,7 +445,7 @@ public class GetAQuotePage extends Helper{
 		return new YourQuotePage();
 	}
 	
-	
+
 	
 
 }

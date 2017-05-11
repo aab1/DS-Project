@@ -60,7 +60,8 @@ public class CompleteAndPayPage extends Helper{
 	}
 	public void clickContinueToGoToLicenceDetailsSection()throws Exception
 	{
-		scrollToAnElement(getElementByCssSelector("#completeLicenceDetails > legend"));
+		//scrollToAnElement(getElementByCssSelector("#completeLicenceDetails > legend"));
+		scrollToAnElement(getElementById("CompletePersonalDetails_LengthOfResidencyId"));
 		continuebuttonToGoToLicencedetailsSection = getElementByXPath("//*[@id=\"completePersonalDetails\"]/ol/li[9]/div/div[1]/button");
 		clickAnElement(continuebuttonToGoToLicencedetailsSection);
 	}
@@ -98,13 +99,13 @@ public class CompleteAndPayPage extends Helper{
 	}
 	public void selectNoHealthCondition() throws Exception
 	{
-		scrollToTheButtomOfAPage();
+		scrollToAnElement(getElementByCssSelector("[for=\"CompleteLicenceDetails_Ild1B\"]"));
 		noHealthCondition = getElementByCssSelector("[for=\"CompleteLicenceDetails_Ild2B\"]");
 		clickAnElement(noHealthCondition);
 	}
 	public void clickContinueButtonToGoToInsuraceDetailSection()throws Exception
 	{
-		scrollToTheButtomOfAPage();
+		scrollToAnElement(getElementByCssSelector("[for=\"CompleteLicenceDetails_Ild2B\"]"));
 		continueButton = getElementByCssSelector("#completeLicenceDetails > ol > li.Bn > div > div:nth-child(1) > button");
 		clickAnElement(continueButton);	
 	}
@@ -229,8 +230,8 @@ public class CompleteAndPayPage extends Helper{
 	}
 	public void isConfirmDetailsSectionDisplayed() throws Exception
 	{
-		scrollToAnElement(getElementByCssSelector("#completeConfirmDetails > ol > li:nth-child(2) > div.confirmDetailsRight > div.box.no-top-margin.ild.clearfloat > div.box-header > h2"));
-		confirmDetailsSectionDisplayed = getElementByXPath("//*[@id=\"completeConfirmDetails\"]/ol/li[2]/div[2]/div[1]/div[1]/h2");
+		scrollToTheButtomOfAPage();
+		confirmDetailsSectionDisplayed = getElementByCssSelector("[for=\"confirmAll\"]");
 		VerifyAnElementIsDisplayed(confirmDetailsSectionDisplayed);
 	}
 	public void confirmTheQuoteDetailsCheckBox() throws Exception
@@ -247,12 +248,11 @@ public class CompleteAndPayPage extends Helper{
 	}
 	//moving to another page from here
 	public SecurePaymentPage clickPayInFullBtn() throws Exception
-	{
-		//scrollToTheButtomOfAPage();
-		
+	{	
 		closeCookieButton = getElementById("set-cookie");
 		clickAnElement(closeCookieButton);
-		scrollToAnElement(getElementById("btnPayInFull"));
+		//scrollToAnElement(getElementByCssSelector("[for=\"confirmAll\"]"));
+		scrollToTheButtomOfAPage();
 		payInFullBtn = getElementById("btnPayInFull");
 		clickAnElement(payInFullBtn);
 		return new SecurePaymentPage();

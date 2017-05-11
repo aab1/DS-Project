@@ -43,17 +43,18 @@
 			</div>
 			<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
 				<li class='analysis waves-effect active'><a href='#!' class='test-view' onclick="_updateCurrentStage(0)"><i class='mdi-action-dashboard'></i>Test Details</a></li>
+					<li class='analysis waves-effect'><a href='#!' class='categories-view' onclick="_updateCurrentStage(1)"><i class='mdi-maps-local-offer'></i>Categories</a></li>
 				<li class='analysis waves-effect'>
 					<a href='#!' onclick="_updateCurrentStage(-1)" class='dashboard-view'><i class='mdi-action-track-changes'></i></i>Analysis</a>
 				</li>
 			</ul>
-			<span class='report-name'>AutoTrader Automation Report</span> <span class='report-headline'>--Report for Automated Regressions Suite</span>
+			<span class='report-name'>Agile team Automation Report for sprint one</span> <span class='report-headline'>--Report for Automated Regressions Suite</span>
 			<ul class='right hide-on-med-and-down nav-right'>
 				<li class='theme-selector' alt='Click to toggle dark theme. To enable by default, use js configuration $("body").addClass("dark");' title='Click to toggle dark theme. To enable by default, use js configuration $("body").addClass("dark");'>
 					<i class='mdi-hardware-desktop-windows'></i>
 				</li>
 				<li>
-					<span class='suite-started-time'>2017-04-25 20:38:49</span>
+					<span class='suite-started-time'>2017-05-11 14:21:07</span>
 				</li>
 				<li>
 					<span>v2.41.1</span>
@@ -83,25 +84,25 @@
 					<div class='col l2 m4 s12'>
 						<div class='card suite-total-time-current'> 
 							<span class='panel-name'>Total Time Taken (Current Run)</span> 
-							<span class='suite-total-time-current-value panel-lead'>0h 1m 18s+336ms</span> 
+							<span class='suite-total-time-current-value panel-lead'>0h 1m 28s+391ms</span> 
 						</div> 
 					</div>
 					<div class='col l2 m4 s12'>
 						<div class='card suite-total-time-overall'> 
 							<span class='panel-name'>Total Time Taken (Overall)</span> 
-							<span class='suite-total-time-overall-value panel-lead'>0h 1m 18s+336ms</span> 
+							<span class='suite-total-time-overall-value panel-lead'>0h 1m 28s+391ms</span> 
 						</div> 
 					</div>
 					<div class='col l2 m4 s6 suite-start-time'>
 						<div class='card accent green-accent'> 
 							<span class='panel-name'>Start</span> 
-							<span class='panel-lead suite-started-time'>2017-04-25 20:37:31</span> 
+							<span class='panel-lead suite-started-time'>2017-05-11 14:19:39</span> 
 						</div> 
 					</div>
 					<div class='col l2 m4 s6 suite-end-time'>
 						<div class='card accent pink-accent'> 
 							<span class='panel-name'>End</span> 
-							<span class='panel-lead suite-ended-time'>2017-04-25 20:38:49</span> 
+							<span class='panel-lead suite-ended-time'>2017-05-11 14:21:07</span> 
 						</div> 
 					</div>
 				</div>
@@ -199,6 +200,27 @@
 						</div>
 					</div>
 				</div>
+					<div class='category-summary-view'>
+						<div class='col l4 m6 s12'>
+							<div class='card-panel'>
+								<span class='label info outline right'>Categories</span>
+								<table>
+									<thead>
+										<tr>
+											<th>Name</th>
+										</tr>
+									</thead>
+									<tbody>
+											<tr>
+												<td>
+													@AbtestingA
+												</td>
+											</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
 			</div>
 			<!-- /dashboard -->
 			
@@ -218,10 +240,21 @@
 									<li class='pass'><a href='#!'>Pass</a></li>
 									<li class='fail'><a href='#!'>Fail</a></li>
 									<li class='skip'><a href='#!'>Skip</a></li>
+										<li class='unknown'><a href='#!'>Unknown</a></li>
 									<li class='divider'></li>
 									<li class='clear'><a href='#!'>Clear Filters</a></li>
 								</ul>
 							</div>
+								<div>
+									<a class='dropdown-button btn-floating btn-small waves-effect waves-light grey category-toggle' data-activates='category-toggle' data-constrainwidth='false' data-beloworigin='true' data-hover='true' href='#'>
+										<i class='mdi-maps-local-offer'></i>
+									</a>
+									<ul id='category-toggle' class='dropdown-content'>
+											<li class='@AbtestingA'><a href='#!'>@AbtestingA</a></li>
+										<li class='divider'></li>
+										<li class='clear'><a href='#!'>Clear Filters</a></li>
+									</ul>
+								</div>
 							<div>
 								<a class='btn-floating btn-small waves-effect waves-light grey' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
 									<i class='mdi-navigation-close'></i>
@@ -249,17 +282,17 @@
 						<div class='card-panel no-padding-h no-padding-v no-margin-v'>
 							<div class='wrapper'>
 								<ul id='test-collection' class='test-collection'>
-										<li class='collection-item test displayed active pass hasChildren' extentid='723dd020-5f3a-4fec-bd80-34e4f624ceea'>
+										<li class='collection-item test displayed active unknown ' extentid='af243e9c-5dc8-4ab1-a733-3d53e1b5d3d3'>
 											<div class='test-head'>
-												<span class='test-name'>Feature: Incept a motor policy </span>
-												<span class='test-status label right outline capitalize pass'>pass</span>
+												<span class='test-name'>Feature: Step2 and 4 new design inluding secure logos </span>
+												<span class='test-status label right outline capitalize unknown'>unknown</span>
 												<span class='category-assigned hide '></span>
 											</div>
 											<div class='test-body'>
 												<div class='test-info'>
-													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2017-04-25 20:37:31</span>
-													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2017-04-25 20:38:49</span>
-													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 1m 17s+571ms</span>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2017-05-11 14:19:39</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2017-05-11 14:19:39</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 0s+0ms</span>
 												</div>
 												<div class='test-desc'></div>
 												<div class='test-attributes'>
@@ -277,15 +310,50 @@
 														</tbody>
 													</table>
 													<ul class='collapsible node-list' data-collapsible='accordion'>
+													</ul>
+												</div>
+											</div>
+										</li>
+										<li class='collection-item test displayed active pass hasChildren' extentid='3d5abf83-80b6-4095-8014-6714683d2a72'>
+											<div class='test-head'>
+												<span class='test-name'>Feature: Old step 2 and step 4 design </span>
+												<span class='test-status label right outline capitalize pass'>pass</span>
+												<span class='category-assigned hide  @abtestinga'></span>
+											</div>
+											<div class='test-body'>
+												<div class='test-info'>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2017-05-11 14:19:39</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2017-05-11 14:21:07</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 1m 27s+656ms</span>
+												</div>
+												<div class='test-desc'></div>
+												<div class='test-attributes'>
+														<div class='categories'>
+																<span class='category text-white'>@AbtestingA</span>
+														</div>
+												</div>
+												<div class='test-steps'>
+													<table class='bordered table-results'>
+														<thead>
+															<tr>
+																<th>Status</th>
+																<th>Timestamp</th>
+																<th>Details</th>
+															</tr>
+														</thead>
+														<tbody>
+														</tbody>
+													</table>
+													<ul class='collapsible node-list' data-collapsible='accordion'>
 																	<li class='displayed pass node-1x'>
 																		<div class='collapsible-header test-node pass'>
 																			<div class='right test-info'>
-																				<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-2 text-white'>2017-04-25 20:37:31</span>
-																				<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-2 text-white'>2017-04-25 20:38:49</span>
-																				<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-2 text-white'>0h 1m 17s+567ms</span>
+																				<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-2 text-white'>2017-05-11 14:19:39</span>
+																				<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-2 text-white'>2017-05-11 14:21:07</span>
+																				<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-2 text-white'>0h 1m 27s+653ms</span>
 																				<span class='test-status label outline capitalize pass'>pass</span>
 																			</div>
-																			<div class='test-node-name'>Scenario: Incept scheme A comprehensive ROI motor policy for employed and unemployed persons who knows their eircode</div>
+																			<div class='test-node-name'>Scenario: Incept a comprehensive ROI motor policy for employed and unemployed persons who knows their eircode. Testing A</div>
 																				<div class='test-node-desc'></div>
 																		</div>
 																		<div class='collapsible-body'>
@@ -302,584 +370,572 @@
 																					<tbody>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:37:40</td>
+																								<td class='timestamp'>14:20:08</td>
 																									<td class='step-name'>Given I navigate to ROI motor DS</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:37:40</td>
+																								<td class='timestamp'>14:20:09</td>
 																									<td class='step-name'>And motor DS Your Detail section is displayed</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:37:40</td>
+																								<td class='timestamp'>14:20:09</td>
 																									<td class='step-name'>When I input firstname "Test"</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:37:40</td>
+																								<td class='timestamp'>14:20:09</td>
 																									<td class='step-name'>And I input lastname "Ptester"</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:37:41</td>
+																								<td class='timestamp'>14:20:10</td>
 																									<td class='step-name'>And I select day of birth"12"</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:37:41</td>
+																								<td class='timestamp'>14:20:10</td>
 																									<td class='step-name'>And I select birth month "05 - May"</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:37:41</td>
+																								<td class='timestamp'>14:20:10</td>
 																									<td class='step-name'>And I select birth Year "1970"</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:37:41</td>
+																								<td class='timestamp'>14:20:11</td>
 																									<td class='step-name'>And I click gender "Female"</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:37:42</td>
+																								<td class='timestamp'>14:20:11</td>
 																									<td class='step-name'>And I input email"tesst@sttesting.net"</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:37:42</td>
+																								<td class='timestamp'>14:20:11</td>
 																									<td class='step-name'>And I select area code "087"</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:37:42</td>
+																								<td class='timestamp'>14:20:12</td>
 																									<td class='step-name'>And I input phone number"0879567812"</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:37:42</td>
+																								<td class='timestamp'>14:20:12</td>
 																									<td class='step-name'>And I click "Yes"Yes/No to Do you know your Eircode question</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:37:43</td>
+																								<td class='timestamp'>14:20:12</td>
 																									<td class='step-name'>And I input the eircode"K32VP28"</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:37:43</td>
+																								<td class='timestamp'>14:20:13</td>
 																									<td class='step-name'>And I click find address</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:37:44</td>
+																								<td class='timestamp'>14:20:14</td>
 																									<td class='step-name'>And I click address checkbox</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:37:44</td>
+																								<td class='timestamp'>14:20:14</td>
 																									<td class='step-name'>And I select type of household "Rented Accommodation"</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:37:44</td>
+																								<td class='timestamp'>14:20:14</td>
 																									<td class='step-name'>And I select employment status"Employed"</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:37:45</td>
+																								<td class='timestamp'>14:20:15</td>
 																									<td class='step-name'>And I select occupation"Accountant"</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:37:45</td>
+																								<td class='timestamp'>14:20:15</td>
 																									<td class='step-name'>And I click continue button on the details section</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:37:45</td>
+																								<td class='timestamp'>14:20:15</td>
 																									<td class='step-name'>And your car section is displayed</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:37:47</td>
+																								<td class='timestamp'>14:20:17</td>
 																									<td class='step-name'>And I input the car reg"10D262"</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:37:47</td>
+																								<td class='timestamp'>14:20:17</td>
 																									<td class='step-name'>And I click find car</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:37:48</td>
+																								<td class='timestamp'>14:20:17</td>
 																									<td class='step-name'>And I click YES to the question Is this your car</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:37:48</td>
+																								<td class='timestamp'>14:20:18</td>
 																									<td class='step-name'>And I click NO to the question Will this car be used for business purposes</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:37:48</td>
+																								<td class='timestamp'>14:20:18</td>
 																									<td class='step-name'>And I click NO to the question Will this car be used for commuting to work</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:37:48</td>
+																								<td class='timestamp'>14:20:18</td>
 																									<td class='step-name'>And I select the number kilometers driven per year"Up to 5,000 km"</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:37:49</td>
+																								<td class='timestamp'>14:20:19</td>
 																									<td class='step-name'>And I click continue button under Your Car section</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:37:49</td>
+																								<td class='timestamp'>14:20:19</td>
 																									<td class='step-name'>And Your driving history section was displayed</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:37:49</td>
+																								<td class='timestamp'>14:20:20</td>
 																									<td class='step-name'>And I select current driving licence"ROI (Full)"</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:37:50</td>
+																								<td class='timestamp'>14:20:20</td>
 																									<td class='step-name'>And I select how long the licence has been held"9 years"</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:37:50</td>
+																								<td class='timestamp'>14:20:20</td>
 																									<td class='step-name'>And I select most recent insurance"Insured in own name"</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:37:50</td>
+																								<td class='timestamp'>14:20:20</td>
 																									<td class='step-name'>And I select number of claims free years within UK and Ireland"6+ Years Claims Free Driving"</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:37:50</td>
+																								<td class='timestamp'>14:20:20</td>
 																									<td class='step-name'>And I click continue button under driving history section</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:37:51</td>
+																								<td class='timestamp'>14:20:21</td>
 																									<td class='step-name'>And additional driver section is displayed</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:37:51</td>
+																								<td class='timestamp'>14:20:21</td>
 																									<td class='step-name'>And I click NO to additional driver</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:37:51</td>
+																								<td class='timestamp'>14:20:21</td>
 																									<td class='step-name'>And I click continue under additional driver section</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:37:51</td>
+																								<td class='timestamp'>14:20:22</td>
 																									<td class='step-name'>And claims section was displayed</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:37:52</td>
+																								<td class='timestamp'>14:20:22</td>
 																									<td class='step-name'>And I click No to claims in the last five years</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:37:52</td>
+																								<td class='timestamp'>14:20:22</td>
 																									<td class='step-name'>And I click continue button under claim section</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:37:52</td>
+																								<td class='timestamp'>14:20:22</td>
 																									<td class='step-name'>And Your cover section is displayed</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:37:52</td>
+																								<td class='timestamp'>14:20:23</td>
 																									<td class='step-name'>And I click NO to the question Do you or anyone living at your address have another policy insured with AXA</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:37:53</td>
+																								<td class='timestamp'>14:20:23</td>
 																									<td class='step-name'>And I select how insurance is paid "Pay in full"</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:37:54</td>
+																								<td class='timestamp'>14:20:24</td>
 																									<td class='step-name'>And I pick insurance start date"29"</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:37:54</td>
+																								<td class='timestamp'>14:20:25</td>
 																									<td class='step-name'>And I tick the box to confirm  assumptions & data protection information has been read</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:37:54</td>
+																								<td class='timestamp'>14:20:25</td>
 																									<td class='step-name'>And I click Get a Quote button</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:37:58</td>
+																								<td class='timestamp'>14:20:31</td>
 																									<td class='step-name'>And Your quote page is displayed</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:37:58</td>
+																								<td class='timestamp'>14:20:31</td>
 																									<td class='step-name'>And I click Car and Key Rescue check box</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:37:58</td>
+																								<td class='timestamp'>14:20:32</td>
 																									<td class='step-name'>And I click Open Driving  check box</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:37:58</td>
+																								<td class='timestamp'>14:20:32</td>
 																									<td class='step-name'>And I click Protected NCD  check box</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:37:59</td>
+																								<td class='timestamp'>14:20:32</td>
 																									<td class='step-name'>And I click Injury Cover  check box</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:37:59</td>
+																								<td class='timestamp'>14:20:32</td>
 																									<td class='step-name'>And I click Legal Expenses  check box</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:37:59</td>
+																								<td class='timestamp'>14:20:32</td>
 																									<td class='step-name'>And I click Car Hire / Replacement Plus  check box</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:37:59</td>
+																								<td class='timestamp'>14:20:32</td>
 																									<td class='step-name'>And I click Comprehensive Drive Other Cars  check box</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:37:59</td>
+																								<td class='timestamp'>14:20:32</td>
 																									<td class='step-name'>And I click Update Quote button</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:38:02</td>
+																								<td class='timestamp'>14:20:37</td>
 																									<td class='step-name'>And I click Buy Now button</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:38:04</td>
+																								<td class='timestamp'>14:20:41</td>
 																									<td class='step-name'>And Complete and Pay page is displayed</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:38:05</td>
+																								<td class='timestamp'>14:20:41</td>
 																									<td class='step-name'>And I select title  "Mrs"</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:38:05</td>
+																								<td class='timestamp'>14:20:41</td>
 																									<td class='step-name'>And I select how long I have stayed in Ireland "More than 3 years"</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:38:06</td>
+																								<td class='timestamp'>14:20:42</td>
 																									<td class='step-name'>And I click continue button to proceed to licence details section</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:38:06</td>
+																								<td class='timestamp'>14:20:42</td>
 																									<td class='step-name'>And Licence details section is displayed</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:38:06</td>
+																								<td class='timestamp'>14:20:45</td>
 																									<td class='step-name'>And I select the day licence was first issued "02"</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:38:06</td>
+																								<td class='timestamp'>14:20:45</td>
 																									<td class='step-name'>And I select the month licence was first issued "05 - May"</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:38:07</td>
+																								<td class='timestamp'>14:20:46</td>
 																									<td class='step-name'>And I select the Year licence was first issued "2010"</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:38:07</td>
+																								<td class='timestamp'>14:20:46</td>
 																									<td class='step-name'>And I select No penalty point</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:38:07</td>
+																								<td class='timestamp'>14:20:46</td>
 																									<td class='step-name'>And I select No conviction</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:38:07</td>
+																								<td class='timestamp'>14:20:47</td>
 																									<td class='step-name'>And I select No health issues</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:38:07</td>
+																								<td class='timestamp'>14:20:47</td>
 																									<td class='step-name'>And I click continue button to proceed to insurance details section</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:38:08</td>
+																								<td class='timestamp'>14:20:48</td>
 																									<td class='step-name'>And insurance details section is displayed</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:38:08</td>
+																								<td class='timestamp'>14:20:48</td>
 																									<td class='step-name'>And I select current insurer"AA Insurance"</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:38:08</td>
+																								<td class='timestamp'>14:20:48</td>
 																									<td class='step-name'>And I enter the expiration date of the existing policy "30/04/2017"</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:38:09</td>
+																								<td class='timestamp'>14:20:49</td>
 																									<td class='step-name'>And I click Yes claim free insurance was earned in either UK or Ireland</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:38:09</td>
+																								<td class='timestamp'>14:20:49</td>
 																									<td class='step-name'>And I click No when asked have you been refused or declined motor insurance</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:38:10</td>
+																								<td class='timestamp'>14:20:49</td>
 																									<td class='step-name'>And I click No when asked Had a motor insurance renewal refused</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:38:10</td>
+																								<td class='timestamp'>14:20:50</td>
 																									<td class='step-name'>And I click continue button to proceed to car details section</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:38:10</td>
+																								<td class='timestamp'>14:20:50</td>
 																									<td class='step-name'>And car details section is displayed</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:38:10</td>
+																								<td class='timestamp'>14:20:50</td>
 																									<td class='step-name'>And I clicked Yes when asked Are you the main driver of the car</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:38:10</td>
+																								<td class='timestamp'>14:20:50</td>
 																									<td class='step-name'>And I clicked Yes when asked Are you or your spouse/civil partner the legal owner of the car</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:38:11</td>
+																								<td class='timestamp'>14:20:51</td>
 																									<td class='step-name'>And I select the value of the car"43000"</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:38:11</td>
+																								<td class='timestamp'>14:20:51</td>
 																									<td class='step-name'>And I select the month car was purchased"05 - May"</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:38:11</td>
+																								<td class='timestamp'>14:20:51</td>
 																									<td class='step-name'>And I select the year car was purchased "2016"</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:38:12</td>
+																								<td class='timestamp'>14:20:52</td>
 																									<td class='step-name'>And I select Yes when asked Is registered by you or your spouse/civil partner</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:38:12</td>
+																								<td class='timestamp'>14:20:52</td>
 																									<td class='step-name'>And I select No when asked has the car going on cover been modified</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:38:12</td>
+																								<td class='timestamp'>14:20:52</td>
 																									<td class='step-name'>And I click continue button to proceed to confirm details section</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:38:19</td>
+																								<td class='timestamp'>14:20:56</td>
 																									<td class='step-name'>And confirm details section is displayed</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:38:19</td>
+																								<td class='timestamp'>14:20:56</td>
 																									<td class='step-name'>And I click the checkbox to confirm that the quote details I have provided are correct</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:38:19</td>
+																								<td class='timestamp'>14:20:57</td>
 																									<td class='step-name'>And I click continue button to select payment option</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:38:26</td>
+																								<td class='timestamp'>14:21:01</td>
 																									<td class='step-name'>And I click pay in full button</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:38:33</td>
+																								<td class='timestamp'>14:21:06</td>
 																									<td class='step-name'>And the secure payment page is displayed</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:38:33</td>
+																								<td class='timestamp'>14:21:06</td>
 																									<td class='step-name'>And I enter card number"4263971921001307"</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:38:33</td>
+																								<td class='timestamp'>14:21:06</td>
 																									<td class='step-name'>And I enter the card  expiry month"02"</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:38:33</td>
+																								<td class='timestamp'>14:21:07</td>
 																									<td class='step-name'>And I enter the card expiry year"22"</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:38:33</td>
+																								<td class='timestamp'>14:21:07</td>
 																									<td class='step-name'>And I enter security code"123"</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:38:34</td>
+																								<td class='timestamp'>14:21:07</td>
 																									<td class='step-name'>And I enter cardholder name "Test"</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:38:34</td>
+																								<td class='timestamp'>14:21:07</td>
 																									<td class='step-name'>And I click pay now button</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:38:48</td>
+																								<td class='timestamp'>14:21:07</td>
 																									<td class='step-name'>And the Thank you page displayed</td>
-																								<td class='step-details'>PASSED</td>
-																							</tr>
-																							<tr>
-																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:38:49</td>
-																									<td class='step-name'>Then I view the policy number</td>
-																								<td class='step-details'>PASSED</td>
-																							</tr>
-																							<tr>
-																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>20:38:49</td>
-																									<td class='step-name'>And the option to register for myAxa is also displayed</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																					</tbody>
@@ -887,6 +943,70 @@
 																			</div>
 																		</div>
 																	</li>
+													</ul>
+												</div>
+											</div>
+										</li>
+										<li class='collection-item test displayed active unknown ' extentid='15b0dc9b-a81e-495b-9cfd-c1ec064ee7b0'>
+											<div class='test-head'>
+												<span class='test-name'>Feature: Step 2 and 4 new design inluding secure logos </span>
+												<span class='test-status label right outline capitalize unknown'>unknown</span>
+												<span class='category-assigned hide '></span>
+											</div>
+											<div class='test-body'>
+												<div class='test-info'>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2017-05-11 14:21:07</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2017-05-11 14:21:07</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 0s+0ms</span>
+												</div>
+												<div class='test-desc'></div>
+												<div class='test-attributes'>
+												</div>
+												<div class='test-steps'>
+													<table class='bordered table-results'>
+														<thead>
+															<tr>
+																<th>Status</th>
+																<th>Timestamp</th>
+																<th>Details</th>
+															</tr>
+														</thead>
+														<tbody>
+														</tbody>
+													</table>
+													<ul class='collapsible node-list' data-collapsible='accordion'>
+													</ul>
+												</div>
+											</div>
+										</li>
+										<li class='collection-item test displayed active unknown ' extentid='a0231211-4904-4446-b8a6-bb5fa7052e45'>
+											<div class='test-head'>
+												<span class='test-name'>Feature: Step 2 and 4 new design inluding secure logos </span>
+												<span class='test-status label right outline capitalize unknown'>unknown</span>
+												<span class='category-assigned hide '></span>
+											</div>
+											<div class='test-body'>
+												<div class='test-info'>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2017-05-11 14:21:07</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2017-05-11 14:21:07</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 0s+0ms</span>
+												</div>
+												<div class='test-desc'></div>
+												<div class='test-attributes'>
+												</div>
+												<div class='test-steps'>
+													<table class='bordered table-results'>
+														<thead>
+															<tr>
+																<th>Status</th>
+																<th>Timestamp</th>
+																<th>Details</th>
+															</tr>
+														</thead>
+														<tbody>
+														</tbody>
+													</table>
+													<ul class='collapsible node-list' data-collapsible='accordion'>
 													</ul>
 												</div>
 											</div>
@@ -919,6 +1039,80 @@
 			<!-- /tests -->
 			
 			<!-- categories -->
+				<div id='categories-view' class='row _addedTable hide'>
+					<div class='col _addedCell1'>
+						<div class='contents'>
+							<div class='card-panel heading'>
+								<h5>Categories</h5>
+							</div>
+							<div class='card-panel filters'>
+								<div class='search' alt='Search tests' title='Search tests'>
+									<div class='input-field left'>
+										<input id='searchTests' type='text' class='validate' placeholder='Search...'>
+									</div>
+									<a href="#" class='btn-floating btn-small waves-effect waves-light blue lighten-1'>
+										<i class='mdi-action-search'></i>
+									</a>
+								</div>
+							</div>
+							<div class='card-panel no-padding-h no-padding-v'>
+								<div class='wrapper'>
+									<ul id='cat-collection' class='cat-collection'>
+											<li class='category-item displayed'>
+												<div class='cat-head'>
+													<span class='category-name'>@AbtestingA</span>
+												</div>
+												<div class='category-status-counts'>
+														<span class='pass label dot'>Pass: 2</span>
+												</div>
+												<div class='cat-body'>
+													<div class='category-status-counts'>
+														<div class='button-group'>
+															<a href='#!' class='pass label filter'>Pass <span class='icon'>2</span></a>
+															<a href='#!' class='fail label filter'>Fail <span class='icon'>0</span></a>
+															<a href='#!' class='other label filter'>Others <span class='icon'>0</span></a>
+														</div>
+													</div>
+													<div class='cat-tests'>
+														<table class='bordered'>
+															<thead>
+																<tr>
+																	<th>RunDate</th>
+																	<th>Test Name</th>
+																	<th>Status</th>
+																</tr>
+															</thead>
+															<tbody>
+																	<tr class='pass'>
+																		<td>2017-05-11 14:19:39</td>
+																		<td><span class='category-link linked' extentid='09a0631d-f980-4705-a854-89c7ef3a4ea5'>Scenario: Incept a comprehensive ROI motor policy for employed and unemployed persons who knows their eircode. Testing A</span></td>
+																		<td><div class='status label capitalize pass'>pass</div></td>
+																	</tr>
+																	<tr class='pass'>
+																		<td>2017-05-11 14:19:39</td>
+																		<td><span class='category-link linked' extentid='3d5abf83-80b6-4095-8014-6714683d2a72'>Feature: Old step 2 and step 4 design</span></td>
+																		<td><div class='status label capitalize pass'>pass</div></td>
+																	</tr>
+															<tbody>
+														</table>
+													</div>
+												</div> 
+											</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id='cat-details-wrapper' class='col _addedCell2'>
+						<div class='contents'>
+							<div class='card-panel details-view'>
+								<h5 class='cat-name'></h5>
+								<div class='cat-container'>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			<!-- /categories -->
 			
 			<!-- exceptions -->

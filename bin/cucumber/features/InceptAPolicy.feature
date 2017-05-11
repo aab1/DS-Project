@@ -1,9 +1,9 @@
-Feature:Incept a motor policy
+Feature:Old step 2 and step 4 design
 		In order to incept a policy
 		As a potential axa customer
 		I want to be able to incept a policy online	
-		
-Scenario Outline: Incept scheme A comprehensive ROI motor policy for employed and unemployed persons who knows their eircode
+@AbtestingA	
+Scenario Outline: Incept a comprehensive ROI motor policy for employed and unemployed persons who knows their eircode. Testing A
 		 Given I navigate to ROI motor DS
 		 And motor DS Your Detail section is displayed
 		 When I input firstname "<firstName>"
@@ -99,8 +99,8 @@ Scenario Outline: Incept scheme A comprehensive ROI motor policy for employed an
 		And I enter cardholder name "<cardholderName>"
 		And I click pay now button 
 		And the Thank you page displayed
-		Then I view the policy number
-		And the option to register for myAxa is also displayed
+		#Then I view the policy number
+		#And the option to register for myAxa is also displayed
 		 
 
 		 

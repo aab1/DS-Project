@@ -16,7 +16,8 @@ public class YourQuotePage extends Helper{
 	WebElement comprehensiveDriveOtherCars;
 	WebElement updateQuoteButton;
 	WebElement buyNowBtn;
-	
+	WebElement continueToBuyNow;
+	WebElement tpft;
 	
 	
 	public void isYourQuotePageDisplayed() throws Exception
@@ -24,6 +25,11 @@ public class YourQuotePage extends Helper{
 		quotePageWithQuoteReference = getElementById("quoteReference");
 		VerifyAnElementIsDisplayed(quotePageWithQuoteReference);
 				
+	}
+	public void SwitchToThirdPartyFireAndTheftCover() throws Exception
+	{
+		tpft = getElementByCssSelector("[class=\"link cover-switch\"]");
+		clickAnElement(tpft);
 	}
 	
 	public void CarAndKeyRescueCheckBox() throws Exception
@@ -74,6 +80,76 @@ public class YourQuotePage extends Helper{
 		buyNowBtn = getElementByXPath("//*[@id=\"Qr\"]/div[4]/div/div[1]/button[2]");
 		waitForElementToBeDisplayed("#Qr > div.Bn.clearfloat.quote-actions > div > div:nth-child(1) > button.btn.btn-lg.btn-block.btn-go.btn-icon-right.icon.buy");
 		clickAnElement(buyNowBtn);
+		return new CompleteAndPayPage();
+	}
+	
+	//Sprint 1 changes
+	public void isStep2_Sprint1_displayed() throws Exception
+	{
+		quotePageWithQuoteReference = getElementById("qtpFullQuoteRef");
+		VerifyAnElementIsDisplayed(quotePageWithQuoteReference);
+	}
+	public void carAndKeyRescueButton() throws Exception
+	{
+		scrollToAnElement(getElementByCssSelector("[id=\"PromotionCode_Btn\"]"));
+		carAndKeyRescue = getElementByCssSelector("[for=\"car-and-key-rescue\"]");
+		clickAnElement(carAndKeyRescue);
+	}
+	public void openDrivingButton() throws Exception
+	{
+		scrollToAnElement(getElementByCssSelector("[for=\"car-and-key-rescue\"]"));
+		openDriving = getElementByCssSelector("[for=\"open-driving\"]");
+		clickAnElement(openDriving);
+	}
+	public void protectedNcdButton() throws Exception
+	{
+		scrollToAnElement(getElementByCssSelector("[for=\"open-driving\"]"));
+		protectedNcd = getElementByCssSelector("[for=\"protected-ncd\"]");
+		clickAnElement(protectedNcd);
+	}
+	public void injuryCoverButton() throws Exception
+	{
+		scrollToAnElement(getElementByCssSelector("[for=\"protected-ncd\"]"));
+		injuryCover = getElementByCssSelector("[for=\"injury-cover\"]");
+		clickAnElement(injuryCover);
+	}
+	public void legalExpensesButton() throws Exception
+	{
+		scrollToAnElement(getElementByCssSelector("[id=\"PromotionCode_Btn\"]"));
+		legalExpenses = getElementByCssSelector("[for=\"legal-expenses\"]");
+		clickAnElement(legalExpenses);
+	}
+	public void carHireReplacementPlusbutton() throws Exception
+	{
+		scrollToAnElement(getElementByCssSelector("[for=\"legal-expenses\"]"));
+		carHireReplacementPlus = getElementByCssSelector("[for=\"car-hire-replacement-plus\"]");
+		clickAnElement(carHireReplacementPlus);
+	}
+	public void comprehensiveDriveOtherCarsButton() throws Exception
+	{
+		scrollToAnElement(getElementByCssSelector("[for=\"car-hire-replacement-plus\"]"));
+		comprehensiveDriveOtherCars = getElementByCssSelector("[for=\"comprehensive-drive-other-cars\"]");
+		clickAnElement(comprehensiveDriveOtherCars);
+	}
+	public void updateQuoteButtonAtPageTop() throws Exception
+	{
+		scrollToAnElement(getElementByCssSelector("[class=\"cover-image\"]"));
+		updateQuoteButton = getElementByCssSelector("#main-content-wrapper > section.band.color-a-bg.color-f.blur-on-updating > div > div > div.col-sm-8.col-sm-push-4.col-md-6.col-md-push-6.blur-on-update-required > div.update-required-message.darken-more > button");
+		clickAnElement(updateQuoteButton);
+	}
+	public CompleteAndPayPage clickContinueToBuyNow() throws Exception
+	{
+		try{
+			
+			waitForElementToDisAppear("[class=\"color-d-bg blur-on-update-required\"]");	
+			
+		}catch(Exception e){
+			
+		}
+		scrollToTheButtomOfAPage();
+		waitForElementToBeDisplayed("#main-content-wrapper > section:nth-child(8) > div > div > div > div > a.btn.btn-go.btn-icon-right.icon.buy-now-btn");
+		continueToBuyNow = getElementByCssSelector("[class=\"btn btn-go btn-icon-right icon buy-now-btn\"]");
+		clickAnElement(continueToBuyNow);
 		return new CompleteAndPayPage();
 	}
 

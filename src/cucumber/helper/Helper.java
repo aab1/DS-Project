@@ -44,7 +44,7 @@ public class Helper
 	 * It only accept css selector so use # for ID and . for class elements*/
 	public static void waitForElementToBeDisplayed(String element) throws Exception
 	{
-		wait = new WebDriverWait(driver, 30);
+		wait = new WebDriverWait(driver, 50);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(element)));
 	}
 	

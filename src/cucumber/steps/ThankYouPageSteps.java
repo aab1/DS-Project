@@ -21,6 +21,11 @@ public class ThankYouPageSteps {
 
 	@Then("^the option to register for myAxa is also displayed$")
 	public void the_option_to_register_for_myAxa_is_also_displayed() throws Throwable {
-		
+		thankYouPage.isMyAxaButtonDisplayed();
+	}
+	//sprint one changes
+	@Then("^I see the policy number on the new page$")
+	public void i_see_the_policy_number_on_the_new_page() throws Throwable {
+		thankYouPage.isPolicyNumDisplayedOnTheNewStep4();
 	}
 }
