@@ -2,7 +2,7 @@ Feature:Step2 and 4 new design inluding secure logos
 		In order to incept a policy
 		As a potential axa customer
 		I want to be able to incept a policy online	
-@sprint1	
+@exp	
 Scenario Outline: Incept a comprehensive ROI motor policy with all addons 
 		 Given I navigate to ROI motor DS
 		 And motor DS Your Detail section is displayed
@@ -118,7 +118,7 @@ Scenario Outline: Incept a comprehensive ROI motor policy with all addons
 		 
 Scenarios:		 
 		|Title	|firstName|lastName|dayOfBirth|birthMonth|birthYear|gender		|email				   	   |areaCode |phoneNumber|eircodeYes/No|eircode  |household 			|employmentStatus|occupation|carRegNum|kilometersDriven|drivingLicence|licenceAge|recentInsurance	 |numOfClaimFreeYears		  |methodOfPayment|startDate	|title	|residency			|dayLicenceIssue|monthLicenceIssue	|yearLicenceIssue	|currentInsurer	|existingPolicyExpirationDate	|carValue		|monthCarWasPurchased	|yearCarWasPurchased	|cardNumber			|cardExpMonth	|cardExpYear	|cvv	|cardholderName	|
-		|Mrs	|Test	  	|Ptester |12		  |	05 - May |	1970   |Female  |	atsst1@sttesting.net   |087		 |0879567812  |Yes		   |K32VP28  |Rented Accommodation  |	Employed	 |Accountant|10D262 	|Up to 8,000   |ROI (Full)	  |9 years	 |Insured in own name|6+ Years Claims Free Driving|Pay in full	  |29			|Mrs	|More than 3 years	|02				|05 - May			|2010				|AA Insurance	|30/04/2017						|43000			|05 - May				|2016					|4263971921001307	|02				|22				|123	|Test			|
+		|Mrs	|Test	  	|Ptester |12		  |	05 - May |	1970   |Female  |	atsst1@sttesting.net   |087		 |0879567812  |Yes		   |K32VP28  |Rented Accommodation  |	Employed	 |Accountant|10D262 	|Up to 5,000 km|ROI (Full)	  |9 years	 |Insured in own name|6+ Years Claims Free Driving|Pay in full	  |29			|Mrs	|More than 3 years	|02				|05 - May			|2010				|AA Insurance	|30/04/2017						|43000			|05 - May				|2016					|4263971921001307	|02				|22				|123	|Test			|
 		#|Mr		|Regression	|tester  |15		  |	05 - May |	1978   |Male  	|	atsst2@sttesting.net   |087		 |0879567812  |Yes		   |K32VP28  |Rented Accommodation  |	Employed	 |Accountant|10D262 	|Up to 8,000   |ROI (Full)	  |9 years	 |Insured in own name|6+ Years Claims Free Driving|Pay in full	  |29			|Mr		|More than 3 years	|02				|05 - May			|2010				|AA Insurance	|30/04/2017						|43000			|05 - May				|2016					|4263971921001307	|02				|22				|123	|Test			|
 		
 		

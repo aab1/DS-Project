@@ -154,7 +154,9 @@ public class CompleteAndPayPage extends Helper{
 	}
 	public void clickYes_areYouMainDriver() throws Exception
 	{
-		waitForElementToBeDisplayed("#completeCarDetails > ol > li:nth-child(3) > div.validation-wrapper > div > div > label:nth-child(2)");
+		//waitForElementToBeDisplayed("#completeCarDetails > ol > li:nth-child(3) > div.validation-wrapper > div > div > label:nth-child(2)");
+		scrollToAnElement(getElementByCssSelector("[id=\"CompleteCarDetails_RegistrationNumber\"]"));
+		waitForElementToBeDisplayed("[for=\"CompleteCarDetails_IsProposerMainDriverA\"]");
 		areYouMainDriver = getElementByCssSelector("[for=\"CompleteCarDetails_IsProposerMainDriverA\"]");
 		clickAnElement(areYouMainDriver);
 	}
@@ -232,7 +234,7 @@ public class CompleteAndPayPage extends Helper{
 	{
 		scrollToTheButtomOfAPage();
 		confirmDetailsSectionDisplayed = getElementByCssSelector("[for=\"confirmAll\"]");
-		VerifyAnElementIsDisplayed(confirmDetailsSectionDisplayed);
+  
 	}
 	public void confirmTheQuoteDetailsCheckBox() throws Exception
 	{

@@ -17,6 +17,7 @@ public class SecurePaymentPage extends Helper{
 	
 	public void isSecurePaymentDisplayed() throws Exception
 	{
+		waitForElementToBeDisplayed("#rxp-body > div.rxp-page-title.rxp-merchant-page-title > span.rxp-page-title-text");
 		PaymentDetails = getElementByCssSelector("#rxp-body > div.rxp-page-title.rxp-merchant-page-title > span.rxp-page-title-text");
 		VerifyAnElementIsDisplayed(PaymentDetails);
 	}

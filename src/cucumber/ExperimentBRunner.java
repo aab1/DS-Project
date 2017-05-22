@@ -18,7 +18,7 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(plugin = {"com.cucumber.listener.ExtentCucumberFormatter"},
 					 features = {"src/cucumber"},
 					 glue = {"cucumber.steps"},
-					 tags = {"~@AbtestingA"}
+					 tags = {"@exp"}
 				)
 
 public class ExperimentBRunner {
