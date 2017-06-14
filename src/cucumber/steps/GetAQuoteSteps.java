@@ -258,6 +258,11 @@ public class GetAQuoteSteps extends Helper{
 	public void i_tick_the_box_to_confirm_assumptions_data_protection_information_has_been_read() throws Throwable {
 	   getAQuotePage.agreeTermsCheckBox();
 	}
+	
+	@When("^I click Yes to recieve offers info$")
+	public void i_click_Yes_to_recieve_offers_info() throws Throwable {
+	    getAQuotePage.clickYesReceiveOffersAndInformationButton();
+	}
 //handshake here below
 	@When("^I click Get a Quote button$")
 	public void i_click_Get_a_Quote_button() throws Throwable {

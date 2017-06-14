@@ -73,12 +73,14 @@ public class CompleteAndPayPage extends Helper{
 	}
 	public void selectDayLicenceWasIssued(String day) throws Exception
 	{
+		scrollToAnElement(getElementByCssSelector("#completeLicenceDetails > legend"));
 		waitForElementToBeDisplayed("#CompleteLicenceDetails_LicenceIssueDateDay");
 		licenceIssueDay = getElementById("CompleteLicenceDetails_LicenceIssueDateDay");
 		selectByValue(licenceIssueDay, day);
 	}
 	public void selectMonthLicenceWasIssued(String month) throws Exception
 	{
+		waitForElementToBeDisplayed("#CompleteLicenceDetails_LicenceIssueDateMonth");
 		licenceIssueMonth = getElementById("CompleteLicenceDetails_LicenceIssueDateMonth");
 		selectByText(licenceIssueMonth, month);
 	}

@@ -2,7 +2,7 @@ Feature:Step2 and 4 new design inluding secure logos
 		In order to incept a policy
 		As a potential axa customer
 		I want to be able to incept a policy online	
-@exp	
+@exp
 Scenario Outline: Incept a comprehensive ROI motor policy with all addons 
 		 Given I navigate to ROI motor DS
 		 And motor DS Your Detail section is displayed
@@ -51,6 +51,7 @@ Scenario Outline: Incept a comprehensive ROI motor policy with all addons
 		 And I select how insurance is paid "<methodOfPayment>" 
 		 And I pick insurance start date"<startDate>"
 		 And I tick the box to confirm  assumptions & data protection information has been read
+		 #And I click Yes to recieve offers info
 		 And I click Get a Quote button
 #New step 2 page
 		And stepTwo with quote refernece is displayed

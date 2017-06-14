@@ -55,6 +55,8 @@ public class GetAQuotePage extends Helper{
 	WebElement coverSection;
 	WebElement anotherPolicy;
 	WebElement paymentMethod;
+	WebElement confirmAssumption;
+	WebElement offers;
 	WebElement datepicker;
 	List<WebElement> allDates;
 	WebElement agreeTerms;
@@ -63,13 +65,14 @@ public class GetAQuotePage extends Helper{
 	WebElement title;
 	WebElement partTimeOccupation;
 	WebElement studentFirstQuote;
+	WebElement offersAndInfoBtn;
 
 	public void navigateToMotorDS() throws Exception
 	{
 		//launchUrl("https://testservices1.axa.ie/MotorQuote/");
 		//launchUrl("https://secureweb.axa.ie/MotorQuote/Step1?promoCode=AXP020001");
-		//launchUrl("https://dsdev.testaxa.ie/MotorQuote/");
-		launchUrl("https://securewebtest.axa.ie/motorquote");
+		launchUrl("https://dsdev.testaxa.ie/MotorQuote/");
+		//launchUrl("https://securewebtest.axa.ie/motorquote");
 		//launchUrl("https://securewebtest.axa.ie/aib/motorquote");
 	}
 	
@@ -409,6 +412,18 @@ public class GetAQuotePage extends Helper{
 		selectByText(paymentMethod, methodOfPayment);
 	}
 	
+	public void click_YES_toConfirmAssumptions() throws Exception
+	{
+		confirmAssumption = getElementByCssSelector("[for=\"YourCover_AgreeTermsA\"]");
+		clickAnElement(confirmAssumption);
+	}
+	
+	public void click_YES_toRecieveOffers() throws Exception
+	{
+		scrollToAnElement(getElementById("CoverDetails_StartDate"));
+		offers = getElementByCssSelector("[for=\"YourCover_IsGdprConsentGivenA\"]");
+		clickAnElement(offers);
+	}
 	public void insuranceStartDate(String startDate) throws Exception
 	{
 		datepicker = getElementByCssSelector("[class=\"k-icon k-i-calendar\"]");
@@ -432,11 +447,19 @@ public class GetAQuotePage extends Helper{
 	
 	public void agreeTermsCheckBox() throws Exception
 	{
-		scrollToTheButtomOfAPage();
+		scrollToAnElement(getElementById("CoverDetails_StartDate"));
 		waitForElementToBeDisplayed("#agree-terms-label");
-		agreeTerms = getElementByXPath("//*[@id=\"agree-terms-label\"]");
+		//agreeTerms = getElementByXPath("//*[@id=\"agree-terms-label\"]");
+		agreeTerms = getElementById("agree-terms-label");
 		clickAnElement(agreeTerms);
 	}
+	
+	public void  clickYesReceiveOffersAndInformationButton() throws Exception
+	{
+		offersAndInfoBtn = getElementByCssSelector("[for=\"YourCover_GdprConsentFlagA\"]");
+		clickAnElement(offersAndInfoBtn);
+	}
+	
 	//return the step2 page below
 	public YourQuotePage getQuoteButton() throws Exception
 	{
@@ -444,6 +467,14 @@ public class GetAQuotePage extends Helper{
 		clickAnElement(getQuoteBtn);
 		return new YourQuotePage();
 	}
+	
+	public void getQuoteReferenceNum() throws Exception
+	{
+		WebElement quoteRef = getElementById("quoteReference");
+		System.out.println(quoteRef.getText());
+	}
+	
+
 	
 
 	

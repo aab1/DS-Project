@@ -4,6 +4,7 @@ package cucumber.helper;
 
 import java.io.File;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.GregorianCalendar;
 import java.util.List;
 
@@ -12,6 +13,7 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -44,7 +46,7 @@ public class Helper
 	 * It only accept css selector so use # for ID and . for class elements*/
 	public static void waitForElementToBeDisplayed(String element) throws Exception
 	{
-		wait = new WebDriverWait(driver, 50);
+		wait = new WebDriverWait(driver, 20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(element)));
 	}
 	
@@ -167,6 +169,18 @@ public class Helper
 	public static void launchUrl(String url) throws Exception
 	{
 		driver.navigate().to(url);
+	}
+	
+	/*##########################################################
+	 * This method help to launch url in new tab for google chrome
+	 * @param simply enter the url
+	 * ##########################################################*/
+	public static void launchUrl_In_NewTab(String url) throws Exception
+	{
+		((JavascriptExecutor)driver).executeScript("window.open()");
+		ArrayList<String> tabs = new ArrayList<String>(driver.getWindowHandles());
+		driver.switchTo().window(tabs.get(1));
+		driver.get(url);
 	}
 	
 	/*#########################################################

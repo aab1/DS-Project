@@ -26,6 +26,9 @@ public class YourQuotePage extends Helper{
 		VerifyAnElementIsDisplayed(quotePageWithQuoteReference);
 				
 	}
+	
+
+	
 	public void SwitchToThirdPartyFireAndTheftCover() throws Exception
 	{
 		tpft = getElementByCssSelector("[class=\"link cover-switch\"]");
